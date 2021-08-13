@@ -8,29 +8,39 @@ let controlContainer = document.createElement("div");
 let resetButton = document.createElement("button");
 let rowInput = document.createElement("input");
 let columnInput = document.createElement("input");
+let titleContainer = document.createElement("div");
+
 
 //modify html elements
 container.setAttribute("class", "container");
 controlContainer.setAttribute("class", "control-container");
 resetButton.textContent = "Reset";
+resetButton.classList.add("bottom-input")
 rowInput.setAttribute("id", "row-input");
 rowInput.setAttribute("type", "number");
 rowInput.setAttribute("min", "0");
 rowInput.setAttribute("max", "50");
-rowInput.setAttribute("value", "16")
+rowInput.setAttribute("value", "16");
+rowInput.classList.add("top-input");
 columnInput.setAttribute("id", "column-input");
 columnInput.setAttribute("type", "number");
 columnInput.setAttribute("min", "0");
 columnInput.setAttribute("value", "16")
 columnInput.setAttribute("max", "50");
+columnInput.classList.add("middle-input");
+titleContainer.textContent = "Sketchy"
+titleContainer.classList.add("titlebox")
+
 
 
 //insert html elements
 document.querySelector("body").appendChild(container);
 document.querySelector("body").appendChild(controlContainer);
-document.querySelector(".control-container").appendChild(resetButton);
 document.querySelector(".control-container").appendChild(rowInput);
 document.querySelector(".control-container").appendChild(columnInput);
+document.querySelector(".control-container").appendChild(resetButton);
+document.querySelector(".control-container").appendChild(titleContainer);
+
 
 //Create Grid
 createGrid = () => {
