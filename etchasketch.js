@@ -32,14 +32,6 @@ document.querySelector(".control-container").appendChild(resetButton);
 document.querySelector(".control-container").appendChild(rowInput);
 document.querySelector(".control-container").appendChild(columnInput);
 
-
-
-
-
-//get row and column size
-
-
-
 //Create Grid
 createGrid = () => {
   rows = document.getElementById("row-input").value;
@@ -52,13 +44,9 @@ createGrid = () => {
     gridItem.addEventListener( "mouseover", () => {
       gridItem.classList.add("gray");
   });
-  gridItem.className = "grid-item";
-  container.appendChild(gridItem)
-}
-
-console.log("create grid fires")
-  console.log("rows: " + rows)
-  console.log("columns: " + columns)
+    gridItem.className = "grid-item";
+    container.appendChild(gridItem)
+  }
 }
 
 //Reset Grid
@@ -70,10 +58,8 @@ let reset = () => {
 })
 createGrid()       
 }
-
 //set reset event
 resetButton.addEventListener("click", () => reset());
 
-
-
+// Begin
 createGrid();
