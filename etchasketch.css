@@ -1,0 +1,30 @@
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    border: solid 6px red;
+}
+
+.control-container{
+    background-color: red;
+    width: 500px;
+    height: 100px;
+    margin: 0 auto;
+    border: solid 6px red;
+}
+
+.grid-item{
+    background-color: white;
+    grid-column-start: auto;
+    grid-column-end: auto;
+    grid-row-start: auto;
+    grid-row-end: auto;
+}
+
+.gray{
+    background-color: gray !important; 
+}
